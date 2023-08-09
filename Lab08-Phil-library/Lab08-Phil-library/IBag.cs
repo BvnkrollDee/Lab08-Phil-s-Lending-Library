@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab08_Phil_library
+{
+    public interface IBag<T> : IEnumerable<T>
+    {
+        /// <summary>
+        /// Add an item to the bag. <c>null</c> items are ignored.
+        /// </summary>
+        void Pack(Book item);
+
+        /// <summary>
+        /// Remove the item from the bag at the given index.
+        /// </summary>
+        /// <returns>The item that was removed.</returns>
+        T Unpack(int index);
+    }
+
+
+}
